@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gnanesh R | Embedded Systems Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(34, 211, 238, 0.35), transparent 50%),
+                  radial-gradient(circle at 70% 80%, rgba(129, 140, 248, 0.35), transparent 50%);
+      animation: subtleShift 18s ease infinite alternate;
+    }
+    @keyframes subtleShift {
+      0% { transform: scale(1) rotate(0deg); }
+      100% { transform: scale(1.15) rotate(5deg); }
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(34, 211, 238, 0.6);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+      animation: particleFloat linear infinite;
+      pointer-events: none;
+    }
+    @keyframes particleFloat {
+      0% { transform: translateY(120vh) scale(0.4); opacity: 0; }
+      15% { opacity: 0.85; }
+      85% { opacity: 0.85; }
+      100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    .glow { box-shadow: 0 0 60px rgba(34, 211, 238, 0.7); }
+
+    .card-hover {
+      transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card-hover:hover {
+      transform: translateY(-28px) scale(1.07) rotate(2deg);
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 85px;
+      height: 4px;
+      background: linear-gradient(to right, #22d3ee, #a855f7);
+      bottom: -10px;
+      left: 0;
+      animation: linePulse 2.8s ease infinite alternate;
+    }
+    @keyframes linePulse { from { width: 35px; } to { width: 85px; } }
+
+    .typing {
+      overflow: hidden;
+      border-right: 4px solid #22d3ee;
+      white-space: nowrap;
+      animation: typing 4.2s steps(48, end) forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { from, to { border-color: transparent } 50% { border-color: #22d3ee; } }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-slate-950/95 backdrop-blur-2xl z-50 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Gnanesh R</h1>
+      <div class="flex gap-10 text-sm font-medium">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#education" class="hover:text-cyan-400 transition">Education</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#leadership" class="hover:text-cyan-400 transition">Leadership</a>
+        <a href="#certifications" class="hover:text-cyan-400 transition">Training</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center pt-20 relative">
+    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div class="space-y-8" data-aos="fade-right">
+        <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur border border-cyan-400/40 rounded-3xl text-sm">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+          </span>
+          Seeking Embedded Systems / IoT Internship
+        </div>
+        
+        <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+          Hi, I'm <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Gnanesh R</span>
+        </h1>
+        
+        <p id="tagline" class="text-3xl text-slate-300 typing inline-block">
+          Building Intelligent Hardware Systems
+        </p>
+        
+        <p class="text-xl text-slate-400 max-w-lg">
+          ECE student passionate about embedded systems, IoT, and hardware design.
+        </p>
+
+        <div class="flex flex-wrap gap-5">
+          <a href="#projects" class="group bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-semibold px-10 py-5 rounded-3xl flex items-center gap-3 hover:scale-110 transition-all duration-300 shadow-xl shadow-cyan-500/50">
+            Explore Projects <i class="fas fa-arrow-right group-hover:translate-x-3 transition"></i>
+          </a>
+          <a href="mailto:gnaneshr04@gmail.com" class="border-2 border-slate-400 hover:border-cyan-400 px-9 py-5 rounded-3xl transition hover:scale-110 flex items-center gap-3">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center relative" data-aos="fade-left">
+        <div class="relative w-96 h-96">
+          <div class="absolute inset-0 rounded-[4rem] border-4 border-cyan-400/40 p-8 glow animate-[spin_25s_linear_infinite]">
+            <div class="w-full h-full rounded-[3rem] bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center text-[170px] relative overflow-hidden">
+              👨‍🔧
+            </div>
+          </div>
+          <div class="absolute top-8 -right-8 text-6xl animate-[spin_8s_linear_infinite]">⚡</div>
+          <div class="absolute bottom-16 -left-10 text-5xl animate-[spin_15s_linear_infinite]">📡</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-slate-900">
+    <div class="max-w-5xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">About Me</h2>
+      <p class="text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+        Dedicated ECE student with hands-on experience in embedded systems, IoT, and signal-level hardware design. 
+        I enjoy understanding systems end-to-end — from sensor input to final response.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-24">
+    <div class="max-w-5xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">Education</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-slate-900 p-10 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-semibold">B.E. Electronics & Communication Engineering</h3>
+          <p class="text-cyan-400">Dr. NGP Institute of Technology, Coimbatore</p>
+          <p class="text-slate-400 mt-6">2023 – 2027 (Expected) | 70%</p>
+        </div>
+        <div class="bg-slate-900 p-10 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-2xl font-semibold">HSC (Class XII)</h3>
+          <p class="text-cyan-400">Sri Bharathi Vidyalaya Academy, Dharmapuri</p>
+          <p class="text-slate-400 mt-6">2022 – 2023 | 69%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills" class="py-24 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">Technical Skills</h2>
+      <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Proficient in hardware and software tools used for building real-world embedded and IoT solutions.
+      </p>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover text-center" data-aos="zoom-in">🧠<br><strong>Microcontrollers</strong><br>Arduino, ESP32, Raspberry Pi</div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover text-center" data-aos="zoom-in" data-aos-delay="100">📐<br><strong>PCB Design</strong><br>Design, Layout, Fabrication & Simulation</div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover text-center" data-aos="zoom-in" data-aos-delay="200">📡<br><strong>Sensors & IoT</strong><br>MQ-3, Load Cell, Temperature, HX711</div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover text-center" data-aos="zoom-in" data-aos-delay="300">💻<br><strong>Programming</strong><br>Embedded C, Python</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="py-24">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">Featured Projects</h2>
+      <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Hands-on projects demonstrating practical application of embedded systems and IoT.
+      </p>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-slate-800 rounded-3xl card-hover overflow-hidden" data-aos="fade-up">
+          <div class="h-3 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
+          <div class="p-9">
+            <h3 class="text-2xl font-bold mb-3">Battery Cooling System for Electric Vehicles</h3>
+            <p class="text-emerald-400 mb-4">2025 – 2026</p>
+            <p class="text-slate-400">Automated thermal management system using ESP32, temperature sensors, Peltier modules, LCD and IoT dashboard for real-time monitoring.</p>
+          </div>
+        </div>
+        <div class="bg-slate-800 rounded-3xl card-hover overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+          <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div class="p-9">
+            <h3 class="text-2xl font-bold mb-3">IoT-Based Smart IV Bag Monitoring System</h3>
+            <p class="text-emerald-400 mb-4">2024 – 2025</p>
+            <p class="text-slate-400">Hospital safety device using load cell and ESP32 to monitor IV fluid levels and send real-time alerts.</p>
+          </div>
+        </div>
+        <div class="bg-slate-800 rounded-3xl card-hover overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-3 bg-gradient-to-r from-pink-500 to-cyan-400"></div>
+          <div class="p-9">
+            <h3 class="text-2xl font-bold mb-3">Alcohol Detection System in Car</h3>
+            <p class="text-emerald-400 mb-4">2023 – 2024</p>
+            <p class="text-slate-400">Vehicle safety system using MQ-3 sensor and Arduino to detect alcohol and cut engine power via relay.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Activities -->
+  <section id="leadership" class="py-24 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">Leadership & Activities</h2>
+      <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Demonstrated leadership through events, competitions, and team coordination.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="fade-up">Event Coordinator – ECE Paper Presentation (40+ participants)</div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="150">Participant – Smart India Hackathon & MSME Hackathon</div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="300">Online Classroom & Educational Management Assistant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Training -->
+  <section id="certifications" class="py-24">
+    <div class="max-w-6xl mx-auto px-8">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center" data-aos="fade-up">Certifications & Training</h2>
+      <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Professional training and hands-on workshops that strengthened my technical foundation.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="flip-up">
+          <strong>PCB Design Workshop</strong><br>
+          <span class="text-cyan-400">NIT Calicut</span><br>
+          Hands-on training on schematic design, layout, and PCB fabrication.
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="flip-up" data-aos-delay="150">
+          <strong>Deep Learning Workshop</strong><br>
+          <span class="text-cyan-400">Bannari Amman Institute</span><br>
+          Neural networks and AI applications in signal processing.
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover" data-aos="flip-up" data-aos-delay="300">
+          <strong>Radio Receiver Internship</strong><br>
+          <span class="text-cyan-400">KRISH TEC (2 Weeks)</span><br>
+          End-to-end RF circuit fabrication and professional lab testing.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-28 bg-gradient-to-b from-slate-900 to-slate-950">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <h2 class="text-5xl font-bold mb-8" data-aos="fade-up">Let's Connect</h2>
+      <p class="text-xl text-slate-400 mb-12" data-aos="fade-up" data-aos-delay="200">Open for Internship Opportunities in Embedded Systems & IoT</p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="tel:+916379609076" class="bg-slate-800 hover:bg-slate-700 px-12 py-6 rounded-3xl flex items-center justify-center gap-4 text-lg transition" data-aos="fade-up" data-aos-delay="300">+91 63796 09076</a>
+        <a href="mailto:gnaneshr04@gmail.com" class="bg-gradient-to-r from-cyan-400 to-purple-500 text-slate-950 font-bold px-12 py-6 rounded-3xl flex items-center justify-center gap-4 text-lg hover:scale-110 transition" data-aos="fade-up" data-aos-delay="400">Send Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-slate-500 border-t border-slate-800">
+    © 2026 Gnanesh R • Coimbatore, India
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1100, easing: 'ease-out-back' });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Subtle Floating Particles (applied globally via hero, but can be extended)
+    function createParticle() {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 6 + 3;
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${Math.random() * 100}vw`;
+      p.style.animationDuration = `${Math.random() * 14 + 11}s`;
+      p.style.opacity = Math.random() * 0.6 + 0.3;
+      document.getElementById('particles').appendChild(p);
+      setTimeout(() => p.remove(), 30000);
+    }
+
+    setInterval(createParticle, 90);
+    for (let i = 0; i < 40; i++) createParticle();
+  </script>
+</body>
+</html>
